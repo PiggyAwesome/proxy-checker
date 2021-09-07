@@ -1,2 +1,2 @@
 # proxy-checker
-Checks your proxys for you!
+Checks your proxys with a 2 second timeout.
