@@ -11,7 +11,7 @@ proxies = proxies.splitlines()
 for proxy in proxies:
   try:
       print("Checking: " + proxy)
-      resp = (requests.get("http://discord.com", proxies={"http":proxy, "https":proxy}, timeout=2)) 
+      resp = (requests.get("http://discord.com", proxies={"http":"http://" + proxy, "https": "https://" + proxy}, timeout=2)) 
       good.append(proxy)
   except requests.exceptions.ProxyError:
       bad.append(proxy)
